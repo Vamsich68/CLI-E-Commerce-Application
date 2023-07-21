@@ -1,17 +1,20 @@
 import argparse
+import user
+import admin
+from user import register_user
 
 # Sample data for categories and products (You can replace this with actual data from a database or data file)
 categories = {
     1: "Electronics",
     2: "Clothing",
     3: "Books",
-    4:  ""
 }
 
 products = {
     1: {"name": "Laptop", "category_id": 1, "price": 50000},
     2: {"name": "T-Shirt", "category_id": 2, "price": 800},
     3: {"name": "Python Crash Course", "category_id": 3, "price": 500},
+    4: {"name": "mobile", "category_id": 1, "price": 10000}
 }
 
 def view_categories():
@@ -43,6 +46,20 @@ def main():
     parser.add_argument("--view_product_details", type=int, help="View product details (provide product ID)")
 
     args = parser.parse_args()
+    print("")
+    email=input("enter your mail: ")
+    password= input("password: ")
+    
+
+# Sample user data (You can get this from the user through the CLI)
+    user_data = {
+        'name': email,
+        'email': password
+        }
+
+# Call the register_user function with the user_data
+    register_user(user_data)
+
 
     if args.view_categories:
         view_categories()
