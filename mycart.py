@@ -41,9 +41,9 @@ def view_product_details(product_id):
 def main():
     parser = argparse.ArgumentParser(description="MyCart - CLI E-commerce App")
 
-    # parser.add_argument("--view_categories", action="store_true", help="View all categories")
-    # parser.add_argument("--view_products", type=int, help="View products under a category (provide category ID)")
-    # parser.add_argument("--view_product_details", type=int, help="View product details (provide product ID)")
+    parser.add_argument("--view_categories", action="store_true", help="View all categories")
+    parser.add_argument("--view_products", type=int, help="View products under a category (provide category ID)")
+    parser.add_argument("--view_product_details", type=int, help="View product details (provide product ID)")
 
     # args = parser.parse_args()
 
